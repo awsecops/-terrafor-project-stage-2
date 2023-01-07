@@ -3,7 +3,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.21" # Optional but recommended in production
+      version = "~> 3.21" # Optional but recommended in stageuction
     }
   }
 }
@@ -11,5 +11,5 @@ terraform {
 # Provider Block
 provider "aws" {
   profile = "default" # AWS Credentials Profile configured on your local desktop terminal  $HOME/.aws/credentials
-  region  = "ap-south-1"
+  region  = "us-east-1"
 }

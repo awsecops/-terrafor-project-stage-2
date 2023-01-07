@@ -4,7 +4,7 @@ resource "aws_acm_certificate" "acm_cert" {
   validation_method = "DNS"
 
   tags = {
-    Environment = "prod"
+    Environment = "stage"
   }
 
   lifecycle {

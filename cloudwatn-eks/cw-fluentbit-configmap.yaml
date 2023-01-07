@@ -4,7 +4,7 @@ metadata:
   name: fluent-bit-cluster-info
   namespace: amazon-cloudwatch
 data:
-  cluster.name: hr-dev-Eks-Cluster
+  cluster.name: Prime-stage-Eks-Cluster
   http.port: "2020"
   http.server: "On"
   logs.region: us-east-1

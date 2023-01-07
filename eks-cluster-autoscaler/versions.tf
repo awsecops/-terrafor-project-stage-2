@@ -23,12 +23,12 @@ terraform {
   }
   # Adding Backend as S3 for Remote State Storage
   backend "s3" {
-    bucket = "terraform-on-aws-ekss"
-    key    = "prod/eks-cluster-autoscaler/terraform.tfstate"
-    region = "ap-south-1" 
+    bucket = "terraform-eks-Primess"
+    key    = "stage/eks-cluster-autoscaler/terraform.tfstate"
+    region = "us-east-1" 
 
     # For State Locking
-    dynamodb_table = "prod-eks-cluster-autoscaler"    
+    dynamodb_table = "stage-eks-cluster-autoscaler"    
   }     
 }
 

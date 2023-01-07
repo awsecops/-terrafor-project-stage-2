@@ -1,10 +1,10 @@
 # Kubernetes Service Manifest (Type: Load Balancer)
 resource "kubernetes_ingress_v1" "ingress" {
   metadata {
-    name = "ingress-prod-demo"
+    name = "ingress-stage-demo"
     annotations = {
       # Load Balancer Name
-      "alb.ingress.kubernetes.io/load-balancer-name" = "ingress-prod-ingress"
+      "alb.ingress.kubernetes.io/load-balancer-name" = "ingress-stage-ingress"
       # Ingress Core Settings
       "alb.ingress.kubernetes.io/scheme" = "internet-facing"
       # Health Check Settings
@@ -26,7 +26,7 @@ resource "kubernetes_ingress_v1" "ingress" {
       # SSL Redirect Setting
       "alb.ingress.kubernetes.io/ssl-redirect" = 443
     # External DNS - For creating a Record Set in Route53
-      "external-dns.alpha.kubernetes.io/hostname" = "prod.myarts.live"
+      "external-dns.alpha.kubernetes.io/hostname" = "stage.myarts.live"
     }    
   }
 
@@ -44,7 +44,7 @@ resource "kubernetes_ingress_v1" "ingress" {
 
     # Rule-1: Route requests to App1 if the DNS is "tfapp101.stacksimplify.com"
     rule {
-      host = "prod.myarts.live"      
+      host = "stage.myarts.live"      
       http {
         path {
           backend {

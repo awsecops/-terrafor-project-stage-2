@@ -3,17 +3,17 @@
 variable "aws_region" {
   description = "created in mumbai region"
   type = string
-  default = "ap-south-1"  
+  default = "us-east-1"  
 }
 # Environment Variable
 variable "environment" {
   description = "Environment Variable used as a prefix"
   type = string
-  default = "PROD"
+  default = "stage"
 }
 # Business Division
 variable "business_divsion" {
   description = "Business Division in the large organization this Infrastructure belongs"
   type = string
-  default = "Netflix"
+  default = "Prime"
 }

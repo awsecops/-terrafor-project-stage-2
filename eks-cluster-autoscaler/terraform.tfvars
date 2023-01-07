@@ -1,7 +1,7 @@
 # Generic Variables
-aws_region = "ap-south-1"
-environment = "prod"
-business_divsion = "Netflix"
+aws_region = "us-east-1"
+environment = "stage"
+business_divsion = "Prime"
 
 
 

@@ -2,7 +2,7 @@
 
 # VPC Name
 variable "vpc_name" {
-  description = "Netflix-prod"
+  description = "Prime-stage"
   type = string 
   default = "VPC"
 }
@@ -18,7 +18,7 @@ variable "vpc_cidr_block" {
 variable "vpc_availability_zones" {
   description = "VPC Availability Zones"
   type = list(string)
-  default = ["ap-south-1a", "ap-south-1b" , "ap-south-1c"]
+  default = ["us-east-1a", "us-east-1b" , "us-east-1c"]
 }
 
 # VPC Public Subnets

@@ -1,15 +1,15 @@
 resource "helm_release" "loadbalancer_controller" {
   depends_on = [aws_iam_role.lbc_iam_role]            
-  name       = "aws-load-balancer-controller"
+  name       = "aws-load-balancer-controller-prime"
 
   repository = "https://aws.github.io/eks-charts"
-  chart      = "aws-load-balancer-controller"
+  chart      = "aws-load-balancer-controller-prime"
 
   namespace = "kube-system"     
 
   set {
     name = "image.repository"
-    value = "602401143452.dkr.ecr.ap-south-1.amazonaws.com/amazon/aws-load-balancer-controller" # Changes based on Region - This is for us-east-1 Additional Reference: https://docs.aws.amazon.com/eks/latest/userguide/add-ons-images.html
+    value = "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-load-balancer-controller" # Changes based on Region - This is for us-east-1 Additional Reference: https://docs.aws.amazon.com/eks/latest/userguide/add-ons-images.html
   }       
 
   set {
@@ -19,7 +19,7 @@ resource "helm_release" "loadbalancer_controller" {
 
   set {
     name  = "serviceAccount.name"
-    value = "aws-load-balancer-controller"
+    value = "aws-load-balancer-controller-prime"
   }
 
   set {

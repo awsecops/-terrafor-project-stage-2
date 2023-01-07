@@ -4,7 +4,7 @@ resource "helm_release" "external_dns" {
   name       = "external-dns"
 
   repository = "https://kubernetes-sigs.github.io/external-dns/"
-  chart      = "external-dns"
+  chart      = "external-dns-prime"
 
   namespace = "default"     
 
@@ -20,7 +20,7 @@ resource "helm_release" "external_dns" {
 
   set {
     name  = "serviceAccount.name"
-    value = "external-dns"
+    value = "external-dns-prime"
   }
 
   set {
